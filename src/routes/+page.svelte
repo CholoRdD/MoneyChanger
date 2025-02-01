@@ -6,14 +6,8 @@
 	let apiKey = 'cfa119cbaabf69fb4a42fdc1';
 	let api = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/`;
 
-	let {
-		name
-	}: {
-		name: string;
-	} = $props();
-
 	let input = $state({
-		value: ``, //valueInput
+		value: 0, //valueInput
 		from: ``, //fromConvert
 		to: `` //toConvert
 	});
@@ -61,7 +55,7 @@
 	}
 </script>
 
-//+page.svelte
-
-<h1>Welcome to SvelteKit</h1>
+<!-- <h1>Welcome to SvelteKit</h1>  -->
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<p>{input.value}</p>
+<Header />
